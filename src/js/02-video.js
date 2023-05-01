@@ -18,6 +18,3 @@ const timeUpdateHandler = (data) => {
 const throttledHandler = throttle(timeUpdateHandler, 1000);
 
 player.on('timeupdate', throttledHandler);
-player.on('play', () => {
-  console.log(localStorage.getItem(STORAGE_KEY));
-});
